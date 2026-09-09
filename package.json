@@ -1,0 +1,39 @@
+{
+  "name": "keferajobs-auth",
+  "version": "1.0.0",
+  "description": "Multi-role authentication module for KeferaJobs (seekers, employers, agencies, admins).",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "worker": "node src/matching-worker.js",
+    "worker:dev": "nodemon src/matching-worker.js",
+    "notifications-worker": "node src/notifications-worker.js",
+    "notifications-worker:dev": "nodemon src/notifications-worker.js",
+    "seed:demo-accounts": "node scripts/seed-demo-accounts.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.637.0",
+    "bcrypt": "^6.0.0",
+    "bullmq": "^5.81.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.4.0",
+    "helmet": "^7.1.0",
+    "ioredis": "^5.11.1",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.5",
+    "multer": "^2.0.1",
+    "node-fetch": "^2.7.0",
+    "pdf-parse": "^1.1.1",
+    "pdfkit": "^0.20.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "engines": {
+    "node": "20.x"
+  }
+}
