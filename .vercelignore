@@ -1,0 +1,12 @@
+# Historical/reference docs and the standalone-process worker entry
+# points — none of this needs to ship in the serverless bundle. The
+# workers (src/matching-worker.js, src/notifications-worker.js) are
+# deployed separately as long-running processes (see DEPLOYMENT.md);
+# their source still lives under src/ since api/index.js's dependency
+# graph doesn't reach them, but excluding the top-level scripts here
+# keeps the function bundle lean.
+archive/
+MIGRATION_NOTES.md
+README.md
+functional_test.js
+.env.example
